@@ -5,6 +5,7 @@ import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { Activity } from "lucide-react";
+import { toast } from "sonner";
 
 export default function SignIn() {
     const router = useRouter();
@@ -21,8 +22,10 @@ export default function SignIn() {
         });
 
         if (res?.error) {
+            toast.error("Invalid email or password");
             setError("Invalid email or password");
         } else {
+            toast.success("Welcome back!");
             router.push("/dashboard");
         }
     };
@@ -39,11 +42,7 @@ export default function SignIn() {
                 <h2 className="text-2xl font-bold text-center text-slate-900 mb-2">Welcome Back</h2>
                 <p className="text-center text-slate-500 mb-8">Sign in to access your health dashboard</p>
 
-                {error && (
-                    <div className="bg-red-50 text-red-600 p-3 rounded-lg mb-6 text-sm text-center">
-                        {error}
-                    </div>
-                )}
+
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                     <div>

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { Activity } from "lucide-react";
+import { toast } from "sonner";
 
 export default function SignUp() {
     const router = useRouter();
@@ -23,10 +24,13 @@ export default function SignUp() {
         });
 
         if (res.ok) {
+            toast.success("Account created successfully!");
             router.push("/signin");
         } else {
             const data = await res.json();
-            setError(data.message || "Something went wrong");
+            const msg = data.message || "Something went wrong";
+            setError(msg);
+            toast.error(msg);
         }
     };
 
@@ -42,11 +46,7 @@ export default function SignUp() {
                 <h2 className="text-2xl font-bold text-center text-slate-900 mb-2">Create Account</h2>
                 <p className="text-center text-slate-500 mb-8">Join HealthCare Plus today</p>
 
-                {error && (
-                    <div className="bg-red-50 text-red-600 p-3 rounded-lg mb-6 text-sm text-center">
-                        {error}
-                    </div>
-                )}
+
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                     <div>

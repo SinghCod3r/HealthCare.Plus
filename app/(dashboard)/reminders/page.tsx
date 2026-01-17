@@ -57,13 +57,13 @@ export default function RemindersPage() {
                 <input
                     type="text"
                     placeholder="New reminder..."
-                    className="flex-1 px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-cyan-500/20"
+                    className="flex-1 px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-cyan-500/20 text-black"
                     value={newTitle}
                     onChange={(e) => setNewTitle(e.target.value)}
                 />
                 <input
                     type="time"
-                    className="px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-cyan-500/20"
+                    className="px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-cyan-500/20 text-black"
                     value={newTime}
                     onChange={(e) => setNewTime(e.target.value)}
                 />
@@ -86,8 +86,8 @@ export default function RemindersPage() {
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, height: 0 }}
                             className={`p-4 rounded-xl border transition-all flex items-center justify-between group ${reminder.completed
-                                    ? "bg-slate-50 border-slate-100 opacity-75"
-                                    : "bg-white border-slate-100 hover:shadow-md hover:border-cyan-100"
+                                ? "bg-slate-50 border-slate-100 opacity-75"
+                                : "bg-white border-slate-100 hover:shadow-md hover:border-cyan-100"
                                 }`}
                         >
                             <div className="flex items-center gap-4">

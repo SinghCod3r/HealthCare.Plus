@@ -72,7 +72,7 @@ export default function ProfilePage() {
                             <input
                                 type="number"
                                 defaultValue={28}
-                                className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500"
+                                className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 text-black"
                             />
                         ) : (
                             <p className="text-lg text-slate-900">28 years</p>
@@ -82,7 +82,7 @@ export default function ProfilePage() {
                     <div>
                         <label className="block text-sm font-medium text-slate-700 mb-2">Gender</label>
                         {isEditing ? (
-                            <select className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500">
+                            <select className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 text-black">
                                 <option>Male</option>
                                 <option>Female</option>
                                 <option>Other</option>
@@ -98,7 +98,7 @@ export default function ProfilePage() {
                             <input
                                 type="number"
                                 defaultValue={175}
-                                className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500"
+                                className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 text-black"
                             />
                         ) : (
                             <p className="text-lg text-slate-900">175 cm</p>
@@ -111,7 +111,7 @@ export default function ProfilePage() {
                             <input
                                 type="number"
                                 defaultValue={70}
-                                className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500"
+                                className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 text-black"
                             />
                         ) : (
                             <p className="text-lg text-slate-900">70 kg</p>
@@ -121,7 +121,7 @@ export default function ProfilePage() {
                     <div className="md:col-span-2">
                         <label className="block text-sm font-medium text-slate-700 mb-2">Blood Type</label>
                         {isEditing ? (
-                            <select className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500">
+                            <select className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 text-black">
                                 <option>A+</option>
                                 <option>A-</option>
                                 <option>B+</option>
@@ -141,7 +141,7 @@ export default function ProfilePage() {
                         {isEditing ? (
                             <textarea
                                 placeholder="e.g., Peanuts, Penicillin..."
-                                className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 min-h-[100px]"
+                                className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 min-h-[100px] text-black"
                                 defaultValue="None"
                             />
                         ) : (
